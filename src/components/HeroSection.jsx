@@ -1,7 +1,7 @@
 import React from "react";
-import headerBackground from "../Photos/headerBackground.jpg";
+import headerBackground from "/Photos/headerBackground.jpg";
 
-function Header() {
+function HeroSection() {
   return (
     <div
       className="relative h-screen w-full bg-cover bg-center"
@@ -26,4 +26,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeroSection;
