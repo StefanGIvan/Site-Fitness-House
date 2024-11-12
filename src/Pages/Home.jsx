@@ -1,15 +1,14 @@
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import React from "react";
+import Presentation from "../components/Presentation";
 
 function Home() {
   return (
-    <>
-      <Navbar />
-      <div>
-        <HeroSection />
-      </div>
-    </>
+    <div>
+      <HeroSection />
+      <Presentation />
+    </div>
   );
 }
 
