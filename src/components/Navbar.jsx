@@ -4,7 +4,7 @@ import fitnessHouseLogo from "/Photos/fitnessHouseLogo.png";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between bg-primaryBlue text-white py-4 px-4">
+    <nav className="flex items-center justify-between bg-primaryGreen text-white py-3 px-4">
       {/*Left-aligned Logo(Home) button*/}
       <div className="flex-shrink-0">
         <Link to="/" className="text-2xl font-bold hover:text-black">
@@ -36,7 +36,7 @@ function Navbar() {
       <div className="flex-shrink-0">
         <Link
           to="/account"
-          className="px-6 py-2 bg-secondaryBlue border-2 border-black rounded hover:text-black"
+          className="px-6 py-2 bg-secondaryGray border-2 border-black rounded hover:text-primaryGreen"
         >
           Account
         </Link>

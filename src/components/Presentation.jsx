@@ -1,10 +1,14 @@
 import React from "react";
+import appStore from "../../public//Photos/appStore.png";
+import googlePlay from "../../public/Photos/googlePlay.png";
+import backgroundPhone from "../../public/Photos/backgroundPhone.jpg";
+import phone from "../../public/Photos/phone.png";
 
 function Presentation() {
   return (
     <>
       {/*First Part of Presentation*/}
-      <section className="bg-[#00e5c5] py-16 px-8 text-black">
+      <section className="bg-primaryGreen py-16 px-8 text-black">
         {/*Main Amplify Section */}
         <div className="max-w-7xl mx-auto text-center mb-24 ">
           <h1 className="text-7xl font-bold mb-8">Amplify</h1>
@@ -86,17 +90,50 @@ function Presentation() {
           <h2 className="text-5xl font-bold mb-2">OUR APPS</h2>
           <h3 className="text-2xl font-bold mb-6">WORK OUT SMART, NOT HARD</h3>
         </div>
-        <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-16 mt-16">
+
+        <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-16 mt-16 relative">
           {/*Text & Buttons Section*/}
-          <div className="flex-1">
+          <div className="flex-1 z-10">
             <p className="text-lg mb-8 leading-relaxed">
               Through apps and technology in the gym you amplify your every
-              move. Sweat is a guided transformational experience.
+              move. Fitness House is a guided transformational experience.
             </p>
             <p className="text-xl font-bold mb-2">
               Here are some benefits of our apps:
             </p>
+            <h3 className="text-2xl font-bold mb-4">FITNESS HOUSE APP</h3>
+            <ul className="list-disc ml-5 text-lg mb-8">
+              <li>Super easy check in & out</li>
+              <li>Book fitness classes anytime</li>
+              <li>You schedule your sessions with your own fitness coach</li>
+            </ul>
             <h3 className="text-2xl font-bold mb-4">DOWNLOAD THE APP</h3>
+            <div className="flex">
+              <img
+                src={googlePlay}
+                alt="Get it on Google Play"
+                className="w-40 h-auto"
+              />
+              <img
+                src={appStore}
+                alt="Download on the App Store"
+                className="w-40 h-auto"
+              />
+            </div>
+          </div>
+
+          {/*Phone & Image Section*/}
+          <div className="flex flex-1 items-center justify-center relative">
+            <img
+              src={backgroundPhone}
+              alt="Gym Background"
+              className="absolute w-full h-auto max-h-[500px] lg:w-[1200px] lg:max-h-[600px] rounded-lg shadow-lg object-cover"
+            />
+            <img
+              src={phone}
+              alt="Fitness House App on Phone"
+              className="w-[300px] lg:w-[400px] shadow-lg z-10 rounded-lg"
+            />
           </div>
         </div>
       </section>
