@@ -4,7 +4,7 @@ import headerBackground from "/Photos/headerBackground.jpg";
 function HeroSection() {
   return (
     <div
-      className="relative h-screen w-full bg-cover bg-center"
+      className="relative h-screen w-full bg-cover bg-center fade-in"
       style={{ backgroundImage: `url(${headerBackground})` }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -17,7 +17,7 @@ function HeroSection() {
             We help you finally build the lifestyle you always wanted. Step by
             step, it is possible.
           </p>
-          <button className="bg-primary text-white font-semibold border-2 border-primaryBlue py-2 px-4 rounded hover:text-black">
+          <button className="bg-primary text-white font-semibold border-2 border-primaryBlue py-2 px-4 rounded shadow-lg transition duration-300 hover:text-primaryGreen hover:border-primaryGreen">
             JOIN NOW
           </button>
         </div>
