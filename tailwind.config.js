@@ -7,6 +7,7 @@ export default {
         primaryGreen: "#00bfa5",
         secondaryGray: "#4a4a4a",
         softBlack: "#2e2e2e",
+        darkBlack: "#1f1f1f",
       },
       fontFamily: {
         sans: ["Rajdhani", "sans-serif"],

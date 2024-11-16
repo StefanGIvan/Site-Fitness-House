@@ -9,6 +9,7 @@ import GymClasses from "./Pages/GymClasses";
 import Subscriptions from "./Pages/Subscriptions";
 import Contact from "./Pages/Contact";
 import Account from "./Pages/Account";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/account" element={<Account />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
