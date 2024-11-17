@@ -1,10 +1,70 @@
 {
   "classes": [
-    { "id": 1, "name": "Yoga", "trainer": "Alice", "time": "8:00 AM" },
-    { "id": 2, "name": "HIIT", "trainer": "Bob", "time": "10:00 AM" }
+    {
+      "id": "1",
+      "name": "Yoga",
+      "trainer": "Alice",
+      "time": "8:00 AM"
+    },
+    {
+      "id": "2",
+      "name": "HIIT",
+      "trainer": "Bob",
+      "time": "10:00 AM"
+    }
   ],
   "trainers": [
-    { "id": 1, "name": "Alice", "specialty": "Yoga" },
-    { "id": 2, "name": "Bob", "specialty": "HIIT" }
+    {
+      "id": "1",
+      "name": "Alice",
+      "specialty": "Yoga"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "specialty": "HIIT"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "3b32",
+      "firstName": "Stefan",
+      "lastName": "Ivan",
+      "email": "stefanivan41@gmail.com",
+      "phoneNumber": "0769023671",
+      "subject": "registration",
+      "message": "Hello! I want to register to your gym!",
+      "terms": true
+    },
+    {
+      "id": "50d3",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@gmail.com",
+      "phoneNumber": "0987656577",
+      "subject": "free",
+      "message": "I want a free day pass!",
+      "terms": true
+    },
+    {
+      "id": "5b01",
+      "firstName": "Alexander",
+      "lastName": "Alvarez",
+      "email": "alexalvarez@gmail.com",
+      "phoneNumber": "83637282391",
+      "subject": "buyback",
+      "message": "BuyBack.",
+      "terms": true
+    },
+    {
+      "id": "292e",
+      "firstName": "Donald",
+      "lastName": "Dominguez",
+      "email": "donaldd@gmail.com",
+      "phoneNumber": "098988772",
+      "subject": "registration",
+      "message": "Please!",
+      "terms": true
+    }
   ]
 }

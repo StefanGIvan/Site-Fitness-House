@@ -3,6 +3,10 @@ import appStore from "../../public//Photos/appStore.png";
 import googlePlay from "../../public/Photos/googlePlay.png";
 import backgroundPhone from "../../public/Photos/backgroundPhone.jpg";
 import phone from "../../public/Photos/phone.png";
+import { PiBarbell } from "react-icons/pi";
+import { IoHourglassOutline } from "react-icons/io5";
+import { MdOutlineHandshake } from "react-icons/md";
+import { BiWorld } from "react-icons/bi";
 
 function Presentation() {
   return (
@@ -27,7 +31,7 @@ function Presentation() {
         <div className="max-w-screen-2xl mx-auto flex flex-wrap justify-around items-start gap-y-24 text-center px-4">
           {/*Feature 1*/}
           <div className="w-[20%] min-w-[250px] flex flex-col items-center">
-            <div className="text-5xl mb-4">🏋️</div>
+            <PiBarbell className="text-5xl mb-4" />
             <div>
               <h3 className="text-xl font-bold mb-2">HIGH-END EQUIPMENT</h3>
               <p className="text-left text-md leading-relaxed">
@@ -40,7 +44,7 @@ function Presentation() {
 
           {/*Feature 2*/}
           <div className="w-[20%] min-w-[250px] flex flex-col items-center">
-            <div className="text-5xl mb-4">⌚</div>
+            <IoHourglassOutline className="text-5xl mb-4" />
             <div>
               <h3 className="text-xl font-bold mb-2">
                 YOU MONITOR YOUR EVOLUTION EASILY!
@@ -57,7 +61,7 @@ function Presentation() {
 
           {/*Feature 3*/}
           <div className="w-[20%] min-w-[250px] flex flex-col items-center">
-            <div className="text-5xl mb-4">🤝</div>
+            <MdOutlineHandshake className="text-5xl mb-4" />
             <div>
               <h3 className="text-xl font-bold mb-2">
                 INVOLVED IN YOUR SUCCESS!
@@ -72,7 +76,7 @@ function Presentation() {
 
           {/*Feature 4*/}
           <div className="w-[20%] min-w-[250px] flex flex-col items-center">
-            <div className="text-5xl mb-4">🌍</div>
+            <BiWorld className="text-5xl mb-4" />
             <div>
               <h3 className="text-xl font-bold mb-2">COMMUNICATION & SPACE</h3>
               <p className="text-left text-md leading-relaxed">

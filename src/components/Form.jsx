@@ -1,20 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function Form() {
+  //State to store form data
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    subject: "",
+    message: "",
+    terms: false,
+  });
+
+  //Function to handle changes in input fields
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  //Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      //Sending data to db.json
+      const response = await axios.post(
+        "http://localhost:3000/registrations",
+        formData
+      );
+      console.log("Form Submitted:", response.data);
+      toast.success("Form successfully submitted!");
+    } catch (error) {
+      console.error("There was an error submitting the form!", error);
+      toast.error("There was an error submitting the form:", error);
+    }
+    //Clear the input fields
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      subject: "",
+      message: "",
+      terms: false,
+    });
+  };
+
   return (
     <section className="bg-softBlack px-20 py-20 h-screen text-white">
-      <div className="w-full max-w-screen-2xl h-full mx-auto p-10 shadow-lg">
+      <div className="w-1/2 max-w-screen-2xl h-full mx-auto p-10 shadow-lg">
         <h1 className="text-5xl font-bold text-center mb-2">FITNESS HOUSE</h1>
-        <h2 className="text-3xl font-semibold text-center mb-14">
+        <h2 className="text-3xl font-semibold text-center mb-14 text-primaryGreen">
           Registration
         </h2>
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           {/*Input Fields*/}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col items-end pr-5">
+            <div className="flex flex-row md:flex-col items-start md:items-center">
               <label
-                className="self-start text-lg font-medium pl-44"
+                className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
                 htmlFor="firstName"
               >
                 FIRST NAME*
@@ -23,25 +73,32 @@ function Form() {
                 type="text"
                 id="firstName"
                 name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
                 required
-                className="w-3/4 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+                className="w-full md:w-2/3 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
               />
             </div>
-            <div className="flex flex-col items-start pl-5">
-              <label className="text-lg font-medium" htmlFor="lastName">
+            <div className="flex flex-row md:flex-col items-start md:items-center">
+              <label
+                className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
+                htmlFor="lastName"
+              >
                 LAST NAME*
               </label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
                 required
-                className="w-3/4 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+                className="w-full md:w-2/3 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
               />
             </div>
-            <div className="flex flex-col items-end pr-5">
+            <div className="flex flex-row md:flex-col items-start md:items-center">
               <label
-                className="self-start text-lg font-medium pl-44"
+                className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
                 htmlFor="email"
               >
                 E-MAIL*
@@ -50,32 +107,44 @@ function Form() {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
-                className="w-3/4 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+                className="w-full md:w-2/3 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
               />
             </div>
-            <div className="flex flex-col items-start pl-5">
-              <label className="text-lg font-medium" htmlFor="phoneNumber">
+            <div className="flex flex-row md:flex-col items-start md:items-center">
+              <label
+                className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
+                htmlFor="phoneNumber"
+              >
                 PHONE NUMBER
               </label>
               <input
                 type="tel"
                 id="phoneNumber"
                 name="phoneNumber"
-                className="w-3/4 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                className="w-full md:w-2/3 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
               />
             </div>
           </div>
           {/*Select Field*/}
-          <div className="flex flex-col items-start pl-44 pt-6">
-            <label className="text-lg font-medium mb-2" htmlFor="subject">
+          <div className="flex flex-row md:flex-col items-start md:items-center">
+            <label
+              className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
+              htmlFor="subject"
+            >
               SUBJECT*
             </label>
             <select
               id="subject"
               name="subject"
+              value={formData.subject}
+              onChange={handleChange}
               required
-              className="w-11/12 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+              className="w-5/6 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
             >
               <option value="">Choose subject...</option>
               <option value="registration">Registration</option>
@@ -84,8 +153,11 @@ function Form() {
             </select>
           </div>
 
-          <div className="flex flex-col items-start pl-44 pt-6">
-            <label className="text-lg font-medium mb-2" htmlFor="message">
+          <div className="flex flex-row md:flex-col items-start md:items-center">
+            <label
+              className="self-center md:w-auto mb-2 md:mr-2 text-lg font-medium"
+              htmlFor="message"
+            >
               MESSAGE
             </label>
             <input
@@ -94,16 +166,19 @@ function Form() {
               rows="10"
               cols="40"
               maxlength="2000"
-              className="w-11/12 h-48 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
+              value={formData.message}
+              onChange={handleChange}
+              className="w-5/6 h-48 px-4 py-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primaryGreen"
             />
           </div>
 
-          <div className="pl-44 pt-4">
+          <div className="flex items-center pl-24 pt-4">
             <input
               type="checkbox"
               id="terms"
               name="terms"
-              required
+              required={formData.terms}
+              onChange={handleChange}
               className="mr-2 w-4 h-4"
             />
             <label htmlFor="terms" className="text-md">
