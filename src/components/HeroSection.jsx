@@ -1,11 +1,11 @@
 import React from "react";
-import headerBackground from "/Photos/headerBackground.jpg";
+import headerBackground from "../../public/Photos/headerBackground.jpg";
 
 function HeroSection() {
   return (
     <div
-      className="relative h-screen w-full bg-cover bg-center fade-in"
-      style={{ backgroundImage: `url(${headerBackground})` }}
+      className="relative h-screen w-full bg-cover bg-center"
+      style={{ backgroundImage: `url(${headerBackground}` }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>
 

@@ -1,6 +1,11 @@
 import React from "react";
+import TrainersPresentation from "../components/TrainersPresentation";
 
 function Trainers() {
-  return <div></div>;
+  return (
+    <div>
+      <TrainersPresentation />
+    </div>
+  );
 }
 export default Trainers;
