@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import gymPattern from "../../public/Photos/gymPattern.webp";
 
-function Form() {
+function Form({ variant }) {
   //State to store form data
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,7 +54,16 @@ function Form() {
   };
 
   return (
-    <section className="bg-softBlack px-20 py-20 h-screen text-white">
+    <section
+      className={`${
+        variant === "contact" ? "py-32" : "bg-softBlack py-20"
+      } px-20 h-screen text-white`}
+      style={{
+        backgroundImage: variant === "contact" ? `url(${gymPattern})` : "",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="w-1/2 max-w-screen-2xl h-full mx-auto p-10 shadow-lg">
         <h1 className="text-5xl font-bold text-center mb-2">FITNESS HOUSE</h1>
         <h2 className="text-3xl font-semibold text-center mb-14 text-primaryGreen">

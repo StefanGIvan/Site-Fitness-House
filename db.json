@@ -15,14 +15,40 @@
   ],
   "trainers": [
     {
-      "id": "1",
-      "name": "Alice",
-      "specialty": "Yoga"
+      "name": "Patrick Johnston",
+      "specialty": "Boxing Trainer",
+      "image": "/Photos/Trainers/trainer1.jpg",
+      "description": "Patrick Johnston is a passionate Boxing Trainer dedicated to helping his clients achieve peak fitness and confidence through strength and technique. With years of experience in both personal training and boxing, Patrick brings motivation, discipline, and a wealth of knowledge to every session."
     },
     {
-      "id": "2",
-      "name": "Bob",
-      "specialty": "HIIT"
+      "name": "Jamie Baxter",
+      "specialty": "Calisthenics Instructor",
+      "image": "/Photos/Trainers/trainer2.jpg",
+      "description": "Jamie Baxter is a dedicated Calisthenics Instructor who believes in harnessing the power of the human body to achieve extraordinary feats. Specializing in bodyweight strength and functional fitness, Jamie uses minimal equipment to help clients build impressive strength, flexibility, and control."
+    },
+    {
+      "name": "Alexander Fisher",
+      "specialty": "Cardio Specialist",
+      "image": "/Photos/Trainers/trainer3.jpg",
+      "description": "Alexander Fisher is a dedicated Cardio Specialist who understands the importance of cardiovascular fitness for overall health and wellness. With years of experience in both indoor and outdoor cardio workouts, Alexander focuses on helping clients improve their endurance, stamina, and heart health."
+    },
+    {
+      "name": "Brandon Austin",
+      "specialty": "Pilates Instructor",
+      "image": "/Photos/Trainers/trainer4.jpg",
+      "description": "Brandon Austin is a dedicated Pilates Instructor, known for his innovative approach to building core strength and flexibility. With a focus on helping clients improve their posture, mobility, and overall stability, Brandon's classes blend traditional Pilates techniques with modern fitness elements."
+    },
+    {
+      "name": "Sam Dawson",
+      "specialty": "Fitness Coach",
+      "image": "/Photos/Trainers/trainer5.jpg",
+      "description": "Sam Dawson is a passionate Fitness Coach with a focus on personalized training programs that help clients achieve their fitness goals efficiently. Whether you want to lose weight, gain muscle, or simply lead a healthier lifestyle, Sam's expertise ensures every workout is both effective and enjoyable."
+    },
+    {
+      "name": "Noel Osborn",
+      "specialty": "Nutrition Expert",
+      "image": "/Photos/Trainers/trainer6.jpg",
+      "description": "Noel Osborn is a dedicated Nutrition Expert who believes that proper diet is the foundation of an active and healthy lifestyle. With years of experience in guiding clients towards optimal nutrition, Noel creates customized meal plans that align with your fitness goals—whether it's weight loss or muscle gain."
     }
   ],
   "registrations": [
