@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import gymPattern from "../../public/Photos/gymPattern.webp";
+import gymPattern from "../../public/Photos/gymPattern.png";
 
 function Form({ variant }) {
   //State to store form data
@@ -25,7 +25,7 @@ function Form({ variant }) {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
+  //POST client data
   //Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,7 +64,11 @@ function Form({ variant }) {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-1/2 max-w-screen-2xl h-full mx-auto p-10 shadow-lg">
+      <div
+        className={`${
+          variant === "contact" ? "bg-softBlack" : ""
+        } w-1/2 max-w-screen-2xl h-full mx-auto p-10 shadow-lg`}
+      >
         <h1 className="text-5xl font-bold text-center mb-2">FITNESS HOUSE</h1>
         <h2 className="text-3xl font-semibold text-center mb-14 text-primaryGreen">
           Registration

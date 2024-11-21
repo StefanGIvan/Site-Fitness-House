@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 function TrainersPresentation() {
   const [trainers, setTrainers] = useState([]);
 
+  //GET trainers
   useEffect(() => {
     const fetchTrainers = async () => {
       try {
@@ -17,6 +19,33 @@ function TrainersPresentation() {
 
     fetchTrainers();
   }, []);
+
+  //PATCH chosen trainer
+  const handleChoose = async (trainerId, isChosen) => {
+    try {
+      //Check if a trainer was already chosen
+      const alreadyChosen = trainers.some(
+        (trainer) => trainer.chosen & (trainer.id !== trainerId)
+      );
+      if (alreadyChosen && !isChosen) {
+        toast.error("Only one trainer can be chosen at a time.");
+        return;
+      }
+      await axios.patch(`http://localhost:3000/trainers/${trainerId}`, {
+        chosen: !isChosen,
+      });
+      //Update state to reflect the chosen/unchosen trainer
+      setTrainers((prevTrainers) =>
+        prevTrainers.map((trainer) =>
+          trainer.id === trainerId ? { ...trainer, chosen: !isChosen } : trainer
+        )
+      );
+      toast.success(isChosen ? "Trainer unchosen!" : "Trainer chosen!");
+    } catch (error) {
+      console.log("Error choosing/unchoosing trainer: ", error);
+      toast.error("Error choosing/unchoosing trainer: ", error);
+    }
+  };
 
   return (
     <div>
@@ -48,8 +77,11 @@ function TrainersPresentation() {
                   {trainer.specialty}
                 </p>
                 <p className="text-xl text-justify">{trainer.description}</p>
-                <button className="align-center text-white bg-purple  px-4 py-2 mt-4 mx-auto rounded-full font-semibold transition duration-300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105">
-                  Choose
+                <button
+                  className="align-center text-white bg-purple  px-4 py-2 mt-4 mx-auto rounded-full font-semibold transition duration-300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105"
+                  onClick={() => handleChoose(trainer.id, trainer.chosen)}
+                >
+                  {trainer.chosen ? "Unchoose" : "Choose"}
                 </button>
               </div>
             </div>
