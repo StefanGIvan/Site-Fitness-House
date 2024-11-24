@@ -1,7 +1,8 @@
 import React from "react";
+import GymClassesPresentation from "../components/GymClassesPresentation.jsx";
 
 function GymClasses() {
-  return <div></div>;
+  return <GymClassesPresentation />;
 }
 
 export default GymClasses;

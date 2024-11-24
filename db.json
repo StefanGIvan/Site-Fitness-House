@@ -1,16 +1,20 @@
 {
   "classes": [
     {
-      "id": "1",
-      "name": "Yoga",
-      "trainer": "Alice",
-      "time": "8:00 AM"
+      "id": "4",
+      "name": "Shoulders Class",
+      "image": "/Photos/shouldersClass.jpg",
+      "instructor": "Sam Dawson",
+      "description": "",
+      "joinNow": "false"
     },
     {
-      "id": "2",
-      "name": "HIIT",
-      "trainer": "Bob",
-      "time": "10:00 AM"
+      "id": "6",
+      "name": "Abs Class",
+      "image": "/Photos/absClass.jpg",
+      "instructor": "Jamie Baxter",
+      "description": "",
+      "joinNow": "false"
     }
   ],
   "trainers": [
