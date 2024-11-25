@@ -174,7 +174,7 @@ function Form({ variant }) {
             >
               MESSAGE
             </label>
-            <input
+            <textarea
               type="text"
               name="message"
               rows="10"

@@ -21,19 +21,19 @@ function Footer() {
           CONTACT US ON:
         </h4>
         <div className="flex flex-row justify-center mt-4 space-x-4">
-          <Link to="/">
+          <Link to="/Contact">
             <img src={instagramIcon} alt="Instagram Icon" />
           </Link>
-          <Link to="/">
+          <Link to="/Contact">
             <img src={facebookIcon} alt="Facebook Icon" />
           </Link>
-          <Link to="/">
+          <Link to="/Contact">
             <img src={youtubeIcon} alt="Youtube Icon" />
           </Link>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 mt-16 justify-evenly">
-          <div className="text-md flex flex-row">
+          <div className="text-md flex flex-row md:w-1/3 justify-center">
             <img src={mapsIcon} alt="Maps Icon" className="w-14 h-14 mr-8" />
             <div className="text-gray-300">
               <h3 className="text-xl mb-4 text-white">CONTACT DETAILS</h3>
@@ -43,9 +43,22 @@ function Footer() {
               <p>Sales number: +40784502333</p>
               <p>stefanivan41@gmail.com</p>
             </div>
+
+            {/*Google Maps*/}
+            <div className="w-full md:w-1/3 h-64 ml-10">
+              <iframe
+                title="Google Maps Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.556149385451!2d26.070073515649427!3d44.43794887910344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4d1e6e1e9f%3A0x7f5ec3f63569e1a2!2sBd.%20Iuliu%20Maniu%206Q%2C%20Bucharest!5e0!3m2!1sen!2sro!4v1699999999999!5m2!1sen!2sro"
+                width="100%"
+                height="100%"
+                allowFullScreen=""
+                loading="lazy"
+                className="border-2 border-black rounded-lg"
+              ></iframe>
+            </div>
           </div>
 
-          <div className="text-md flex flex-row">
+          <div className="text-md flex flex-row md:w-1/3 justify-center">
             <img
               src={calendarIcon}
               alt="Calendar Icon"
@@ -58,7 +71,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="text-md flex flex-row ">
+          <div className="text-md flex flex-row md:w-1/3 justify-center">
             <img
               src={handshakeIcon}
               alt="Handshake Icon"

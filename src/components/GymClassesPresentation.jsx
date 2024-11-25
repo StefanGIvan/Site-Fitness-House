@@ -20,21 +20,39 @@ function GymClasses() {
     fetchClasses();
   }, []);
 
-  //DELETE gym class description
-  const handleDeleteDescription = async (classId) => {
+  //DELETE gym class
+  const handleDelete = async (classId) => {
     try {
+      await axios.delete(`http://localhost:3000/classes/${classId}`);
+      setClasses((prevClasses) =>
+        prevClasses.filter((gymClass) => gymClass.id !== classId)
+      );
+      toast.success("Gym class deleted successfully!");
+    } catch (error) {
+      console.log("Error deleting gym class: ", error);
+      toast.error("Error deleting gym class: ", error);
+    }
+  };
+
+  //PATCH request joinNow
+  const handleJoinNow = async (classId, joinNowStatus) => {
+    try {
+      if (joinNowStatus) {
+        toast.success("You have already joined this class!");
+        return;
+      }
       await axios.patch(`http://localhost:3000/classes/${classId}`, {
-        description: "",
+        joinNow: true,
       });
       setClasses((prevClasses) =>
         prevClasses.map((gymClass) =>
-          gymClass.id === classId ? { ...gymClass, description: "" } : gymClass
+          gymClass.id === classId ? { ...gymClass, joinNow: true } : gymClass
         )
       );
-      toast.success("Gym class description deleted successfully!");
+      toast.success("You have joined the class!");
     } catch (error) {
-      console.log("Error deleting gym class description: ", error);
-      toast.error("Error deleting gym class description: ", error);
+      console.log("Error joining gym class: ", error);
+      toast.error("Error joining gym class: ", error);
     }
   };
 
@@ -48,12 +66,12 @@ function GymClasses() {
           Check out our variety of classes to help you get fit and stay
           motivated!
           <br /> <span className="text-purple">New</span>: You can delete the
-          class descriptions you don't need!
+          gym classes you aren't interested in!
         </h3>
       </div>
       <div className="bg-softBlack max-w-full mx-auto py-32 px-8 min-h-screen">
         <div className="flex flex-wrap flex-row justify-center gap-16">
-          {classes.map((gymClass, index) => (
+          {classes.map((gymClass) => (
             <div
               key={gymClass.id}
               className="bg-primaryGreen rounded-2xl shadow-lg overflow-hidden
@@ -63,7 +81,7 @@ function GymClasses() {
               <img
                 src={gymClass.image}
                 alt={gymClass.name}
-                className="w-full h-[60%] object-cover object-top rounded-2xl"
+                className="w-full h-[60%] object-cover object-top"
               />
               <div className="p-6 text-left flex flex-col">
                 <h3 className="text-3xl font-semibold mb-1">{gymClass.name}</h3>
@@ -71,14 +89,17 @@ function GymClasses() {
                   {gymClass.instructor}
                 </p>
                 <p className="text-xl text-justify">{gymClass.description}</p>
-                <button className="align-center text-white bg-purple px-4 py-2 mt-4 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105">
+                <button
+                  className="align-center text-white bg-purple px-4 py-2 mt-4 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105"
+                  onClick={() => handleJoinNow(gymClass.id, gymClass.joinNow)}
+                >
                   JOIN NOW
                 </button>
                 <button
                   className="align-center text-white bg-red-600 px-4 py-2 mt-4 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-red-600 hover:scale-105"
-                  onClick={() => handleDeleteDescription(gymClass.id)}
+                  onClick={() => handleDelete(gymClass.id)}
                 >
-                  DELETE DESCRIPTION
+                  DELETE
                 </button>
               </div>
             </div>

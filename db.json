@@ -1,20 +1,52 @@
 {
   "classes": [
     {
-      "id": "4",
+      "id": "1",
+      "name": "Band Class",
+      "image": "/Photos/bandClass.jpg",
+      "instructor": "Alexander Fisher",
+      "description": "Improve your strength, flexibility, and endurance with our dynamic band workout class. Using resistance bands, you'll engage every muscle group, increase your range of motion, and tone your body. Perfect for all fitness levels!",
+      "joinNow": true
+    },
+    {
+      "id": "2",
+      "name": "Yoga Class",
+      "image": "/Photos/yogaClass.jpg",
+      "instructor": "Alexander Fisher",
+      "description": "Relax, stretch, and strengthen your body with our rejuvenating yoga class. Whether you're a beginner or experienced, this session will help improve your flexibility, balance, and mental clarity, leaving you refreshed and centered.",
+      "joinNow": false
+    },
+    {
+      "id": "3",
       "name": "Shoulders Class",
       "image": "/Photos/shouldersClass.jpg",
       "instructor": "Sam Dawson",
-      "description": "",
-      "joinNow": "false"
+      "description": "Target and sculpt your shoulders with our focused workout designed to build strength and definition. Using a combination of presses, raises, and functional exercises, this class will help you achieve powerful and well-rounded shoulders.",
+      "joinNow": false
     },
     {
-      "id": "6",
+      "id": "4",
+      "name": "Legs Class",
+      "image": "/Photos/legsClass.jpg",
+      "instructor": "Brandon Austin",
+      "description": "Strengthen and tone your legs in this intense workout class focusing on quads, hamstrings, glutes, and calves. With a mix of squats, lunges, and functional lower body exercises, you'll build endurance and achieve powerful, sculpted legs.",
+      "joinNow": false
+    },
+    {
+      "id": "5",
       "name": "Abs Class",
       "image": "/Photos/absClass.jpg",
       "instructor": "Jamie Baxter",
-      "description": "",
-      "joinNow": "false"
+      "description": "Target and tone your core muscles in this focused abs workout class. With a combination of crunches, planks, and dynamic core exercises, you'll build strength, stability, and achieve a defined midsection. Perfect for all fitness levels!",
+      "joinNow": false
+    },
+    {
+      "id": "6",
+      "name": "Boxing Class",
+      "image": "/Photos/boxingClass.jpg",
+      "instructor": "Patrick Johnston",
+      "description": "Unleash your inner fighter with our high-energy boxing workout class! Learn basic techniques, build strength, improve coordination, and burn calories fast with a mix of bag work, cardio drills, and conditioning exercises.",
+      "joinNow": false
     }
   ],
   "trainers": [
