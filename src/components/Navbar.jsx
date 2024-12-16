@@ -17,7 +17,7 @@ function Navbar() {
       </div>
 
       {/*Centered links*/}
-      <div className="space-x-20">
+      <div className="space-x-14">
         <Link
           to="/trainers"
           className="text-xl shadow-lg transition duration-300 hover:text-primaryGreen"
@@ -29,6 +29,12 @@ function Navbar() {
           className="text-xl shadow-lg transition duration-300 hover:text-primaryGreen"
         >
           Gym Classes
+        </Link>
+        <Link
+          to="/subscriptions"
+          className="text-xl shadow-lg transition duration-300 hover:text-primaryGreen"
+        >
+          Subscriptions
         </Link>
         <Link
           to="/contact"

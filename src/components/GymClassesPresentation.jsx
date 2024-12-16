@@ -20,20 +20,6 @@ function GymClasses() {
     fetchClasses();
   }, []);
 
-  //DELETE gym class
-  const handleDelete = async (classId) => {
-    try {
-      await axios.delete(`http://localhost:3000/classes/${classId}`);
-      setClasses((prevClasses) =>
-        prevClasses.filter((gymClass) => gymClass.id !== classId)
-      );
-      toast.success("Gym class deleted successfully!");
-    } catch (error) {
-      console.log("Error deleting gym class: ", error);
-      toast.error("Error deleting gym class: ", error);
-    }
-  };
-
   //PATCH request joinNow
   const handleJoinNow = async (classId, joinNowStatus) => {
     try {
@@ -62,11 +48,9 @@ function GymClasses() {
         <h2 className="text-primaryGreen text-5xl font-bold text-center mb-6">
           Our Gym classes!
         </h2>
-        <h3 className="text-2xl text-center font-semibold text-white mb-20">
+        <h3 className="text-2xl text-center font-semibold text-white mb-12">
           Check out our variety of classes to help you get fit and stay
           motivated!
-          <br /> <span className="text-purple">New</span>: You can delete the
-          gym classes you aren't interested in!
         </h3>
       </div>
       <div className="bg-softBlack max-w-full mx-auto py-32 px-8 min-h-screen">
@@ -90,16 +74,10 @@ function GymClasses() {
                 </p>
                 <p className="text-xl text-justify">{gymClass.description}</p>
                 <button
-                  className="align-center text-white bg-purple px-4 py-2 mt-4 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105"
+                  className="align-center text-white bg-purple px-4 py-2 mt-8 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-purpleGlow hover:scale-105"
                   onClick={() => handleJoinNow(gymClass.id, gymClass.joinNow)}
                 >
                   JOIN NOW
-                </button>
-                <button
-                  className="align-center text-white bg-red-600 px-4 py-2 mt-4 mx-auto rounded-2xl font-semibold transition duration:300 hover:shadow-lg hover:shadow-red-600 hover:scale-105"
-                  onClick={() => handleDelete(gymClass.id)}
-                >
-                  DELETE
                 </button>
               </div>
             </div>

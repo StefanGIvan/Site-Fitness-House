@@ -22,7 +22,7 @@
       "image": "/Photos/shouldersClass.jpg",
       "instructor": "Sam Dawson",
       "description": "Target and sculpt your shoulders with our focused workout designed to build strength and definition. Using a combination of presses, raises, and functional exercises, this class will help you achieve powerful and well-rounded shoulders.",
-      "joinNow": false
+      "joinNow": true
     },
     {
       "id": "4",
