@@ -1,14 +1,15 @@
 {
   "name": "site-sala-fitness",
+  "homepage": "https://stefangivan.github.io/Site-Fitness-House/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@react-spring/parallax": "^9.7.5",
     "axios": "^1.7.7",

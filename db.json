@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Band Class",
-      "image": "/Photos/bandClass.jpg",
+      "image": "https://i.imgur.com/pvpEYM3.jpeg",
       "instructor": "Alexander Fisher",
       "description": "Improve your strength, flexibility, and endurance with our dynamic band workout class. Using resistance bands, you'll engage every muscle group, increase your range of motion, and tone your body. Perfect for all fitness levels!",
       "joinNow": true
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "name": "Yoga Class",
-      "image": "/Photos/yogaClass.jpg",
+      "image": "https://i.imgur.com/qUBo06A.jpeg",
       "instructor": "Alexander Fisher",
       "description": "Relax, stretch, and strengthen your body with our rejuvenating yoga class. Whether you're a beginner or experienced, this session will help improve your flexibility, balance, and mental clarity, leaving you refreshed and centered.",
       "joinNow": false
@@ -19,7 +19,7 @@
     {
       "id": "3",
       "name": "Shoulders Class",
-      "image": "/Photos/shouldersClass.jpg",
+      "image": "https://i.imgur.com/zc32T6t.jpeg",
       "instructor": "Sam Dawson",
       "description": "Target and sculpt your shoulders with our focused workout designed to build strength and definition. Using a combination of presses, raises, and functional exercises, this class will help you achieve powerful and well-rounded shoulders.",
       "joinNow": true
@@ -27,7 +27,7 @@
     {
       "id": "4",
       "name": "Legs Class",
-      "image": "/Photos/legsClass.jpg",
+      "image": "https://i.imgur.com/O18Zo6f.jpeg",
       "instructor": "Brandon Austin",
       "description": "Strengthen and tone your legs in this intense workout class focusing on quads, hamstrings, glutes, and calves. With a mix of squats, lunges, and functional lower body exercises, you'll build endurance and achieve powerful, sculpted legs.",
       "joinNow": false
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "name": "Abs Class",
-      "image": "/Photos/absClass.jpg",
+      "image": "https://i.imgur.com/hjYKR4f.jpeg",
       "instructor": "Jamie Baxter",
       "description": "Target and tone your core muscles in this focused abs workout class. With a combination of crunches, planks, and dynamic core exercises, you'll build strength, stability, and achieve a defined midsection. Perfect for all fitness levels!",
       "joinNow": false
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "name": "Boxing Class",
-      "image": "/Photos/boxingClass.jpg",
+      "image": "https://i.imgur.com/QZfyIDc.jpeg",
       "instructor": "Patrick Johnston",
       "description": "Unleash your inner fighter with our high-energy boxing workout class! Learn basic techniques, build strength, improve coordination, and burn calories fast with a mix of bag work, cardio drills, and conditioning exercises.",
       "joinNow": false
@@ -54,7 +54,7 @@
       "id": "1",
       "name": "Patrick Johnston",
       "specialty": "Boxing Trainer",
-      "image": "/Photos/Trainers/trainer1.jpg",
+      "image": "https://i.imgur.com/pHG6NZ4.jpeg",
       "description": "Patrick Johnston is a passionate Boxing Trainer dedicated to helping his clients achieve peak fitness and confidence through strength and technique. With years of experience in both personal training and boxing, Patrick brings motivation, discipline, and a wealth of knowledge to every session.",
       "chosen": false
     },
@@ -62,7 +62,7 @@
       "id": "2",
       "name": "Jamie Baxter",
       "specialty": "Calisthenics Instructor",
-      "image": "/Photos/Trainers/trainer2.jpg",
+      "image": "https://i.imgur.com/JoYFcWW.jpeg",
       "description": "Jamie Baxter is a dedicated Calisthenics Instructor who believes in harnessing the power of the human body to achieve extraordinary feats. Specializing in bodyweight strength and functional fitness, Jamie uses minimal equipment to help clients build impressive strength, flexibility, and control.",
       "chosen": false
     },
@@ -70,7 +70,7 @@
       "id": "3",
       "name": "Alexander Fisher",
       "specialty": "Cardio Specialist",
-      "image": "/Photos/Trainers/trainer3.jpg",
+      "image": "https://i.imgur.com/IC3TiZa.jpeg",
       "description": "Alexander Fisher is a dedicated Cardio Specialist who understands the importance of cardiovascular fitness for overall health and wellness. With years of experience in both indoor and outdoor cardio workouts, Alexander focuses on helping clients improve their endurance, stamina, and heart health.",
       "chosen": false
     },
@@ -78,7 +78,7 @@
       "id": "4",
       "name": "Brandon Austin",
       "specialty": "Pilates Instructor",
-      "image": "/Photos/Trainers/trainer4.jpg",
+      "image": "https://i.imgur.com/6ru4BkQ.jpeg",
       "description": "Brandon Austin is a dedicated Pilates Instructor, known for his innovative approach to building core strength and flexibility. With a focus on helping clients improve their posture, mobility, and overall stability, Brandon's classes blend traditional Pilates techniques with modern fitness elements.",
       "chosen": false
     },
@@ -86,7 +86,7 @@
       "id": "5",
       "name": "Sam Dawson",
       "specialty": "Fitness Coach",
-      "image": "/Photos/Trainers/trainer5.jpg",
+      "image": "https://i.imgur.com/tOz2MWV.jpeg",
       "description": "Sam Dawson is a passionate Fitness Coach with a focus on personalized training programs that help clients achieve their fitness goals efficiently. Whether you want to lose weight, gain muscle, or simply lead a healthier lifestyle, Sam's expertise ensures every workout is both effective and enjoyable.",
       "chosen": false
     },
@@ -94,7 +94,7 @@
       "id": "6",
       "name": "Noel Osborn",
       "specialty": "Nutrition Expert",
-      "image": "/Photos/Trainers/trainer6.jpg",
+      "image": "https://i.imgur.com/7A6CMjw.jpeg",
       "description": "Noel Osborn is a dedicated Nutrition Expert who believes that proper diet is the foundation of an active and healthy lifestyle. With years of experience in guiding clients towards optimal nutrition, Noel creates customized meal plans that align with your fitness goals—whether it's weight loss or muscle gain.",
       "chosen": false
     }

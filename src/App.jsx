@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
 import Home from "./Pages/Home";
 import Trainers from "./Pages/Trainers";
 import GymClasses from "./Pages/GymClasses";
@@ -13,7 +12,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <ToastContainer
         position="top-right" // Position of the toast on the page
@@ -35,7 +34,7 @@ function App() {
         <Route path="/account" element={<Account />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

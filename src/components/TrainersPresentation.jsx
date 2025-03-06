@@ -9,7 +9,9 @@ function TrainersPresentation() {
   useEffect(() => {
     const fetchTrainers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/trainers");
+        const response = await axios.get(
+          "https://67c8693b0acf98d070867559.mockapi.io/stefan-fitness-api/trainers"
+        );
         setTrainers(response.data);
       } catch (error) {
         console.log("Error fetching trainers: ", error);
@@ -31,9 +33,12 @@ function TrainersPresentation() {
         toast.error("Only one trainer can be chosen at a time.");
         return;
       }
-      await axios.patch(`http://localhost:3000/trainers/${trainerId}`, {
-        chosen: !isChosen,
-      });
+      await axios.patch(
+        `https://67c8693b0acf98d070867559.mockapi.io/stefan-fitness-api/trainers/:id`,
+        {
+          chosen: !isChosen,
+        }
+      );
       //Update state to reflect the chosen/unchosen trainer
       setTrainers((prevTrainers) =>
         prevTrainers.map((trainer) =>

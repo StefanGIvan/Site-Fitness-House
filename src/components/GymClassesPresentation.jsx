@@ -10,7 +10,9 @@ function GymClasses() {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/classes");
+        const response = await axios.get(
+          "https://67c8693b0acf98d070867559.mockapi.io/stefan-fitness-api/classes"
+        );
         setClasses(response.data);
       } catch (error) {
         console.log("Error fetching gym classes: ", error);
@@ -27,9 +29,12 @@ function GymClasses() {
         toast.success("You have already joined this class!");
         return;
       }
-      await axios.patch(`http://localhost:3000/classes/${classId}`, {
-        joinNow: true,
-      });
+      await axios.patch(
+        `https://67c8693b0acf98d070867559.mockapi.io/stefan-fitness-api/classes/:id`,
+        {
+          joinNow: true,
+        }
+      );
       setClasses((prevClasses) =>
         prevClasses.map((gymClass) =>
           gymClass.id === classId ? { ...gymClass, joinNow: true } : gymClass
